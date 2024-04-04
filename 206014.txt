@@ -1,0 +1,41 @@
+git init   #Inicijalizirame git 
+$ git remote add origin https://github.com/kostojchinoskim/-SI_2024_lab1_206014.git #Mu dodavame remote repo
+$ nano README.md #pravime README
+$ git add README.md #add na scena
+$ git commit -m "Initial commit" #commit na README
+$ git add --all #gi dodavame java klasite
+$ git commit -m "Add starter code" #commit na istite
+$ git push -u origin master #push na github
+$ git branch bug1 #pravime granka1
+$ git branch bug2 #pravime granka2
+$ git checkout bug1 #se prefrlame na granka1
+$ nano SILab1_1.java #menuvame vo klasta
+$ git add SILab1_1.java #ja dodavame
+$ git commit -m "Fix wrong condition in filterOddLengthStrings" #commit na istata
+$ git checkout bug2 #se prefrlame na granka2
+$ nano SILab1_2.java #menuvame vo klasata
+$ git add SILab1_2.java #ja dodavame
+$ git commit -m " Fix wrong condition in makeBigStringFrom" #commit na istata
+$ git checkout bug1 #se prefrlame na granka1
+$ nano SILab1Main.java #menuvame vo mainot
+$ git add SILab1Main.java #add na main klasa
+$ git commit -m " Call method filterOddLengthStrings in main class" #commit na istata
+$ git checkout bug2 #se prefrlame na granka2
+$ nano SILab1Main.java #menuvame vo main
+$ git add SILab1Main.java #add na mainot
+$ git commit -m " Call method makeBigStringFrom in main class" #commit na mainot
+$ git push origin bug2 #sinhronizacija
+$ git push origin bug1 #sinhronizacija
+$ git checkout master #se prefrlame na master
+$ git merge bug1 # gi spujuvame bug1 so master
+$ git push --all # sinhronizacija na grankite
+$ git checkout bug2 #se prefrlame na granka2
+$ git rebase master #pravime rebase kon master
+$ nano SILab1Main.java #se reshava konfliktot
+$ git add SILab1Main.java #add na reshenieto
+$ git rebase --continue #se prodolzuva os reabase
+$ git checkout master #se prefrlame na master
+$ git merge bug2 #ja spojuvame bug2 so master
+$ git push --all #sinhronizacija
+$ git push --force origin bug2 #sinhronizacija sa silom
+$ git log #gi zemame logovite
